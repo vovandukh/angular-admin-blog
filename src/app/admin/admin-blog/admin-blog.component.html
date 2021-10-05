@@ -1,0 +1,33 @@
+<form [formGroup]="postForm" (ngSubmit)="createBlog()">
+    <input formControlName="title" type="text" class="form-control" placeholder="Title here.." style="margin: 20px 0;">
+    <textarea formControlName="description" style="height: 100px;" class="form-control"
+        placeholder="Text here.."></textarea>
+    <input formControlName="author" type="text" class="form-control" placeholder="Author here .."
+        style="margin: 40px 0 20px ; height: 50px;">
+    <button type="submit" class="btn btn-dark" style="margin: 0 0 20px;" [disabled] = "postForm.invalid">Add</button>
+</form>
+<hr>
+<table class="table" style="font-size: 20px;">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Text</th>
+            <th scope="col">Date</th>
+            <th scope="col">Author</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of adminBlog; let i = index">
+            <td>{{ i+1 }}</td>
+            <td> {{ item.title }} </td>
+            <td> {{ item.description }} </td>
+            <td> {{ item.date }} </td>
+            <td> {{ item.author }} </td>
+            <td><button class="btn btn-dark" type="button" (click)="editPost(item)">Edit</button></td>
+            <td><button class="btn btn-dark" type="button" (click)="deletePost(item)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
