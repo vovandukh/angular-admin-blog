@@ -70,8 +70,6 @@ export class AdminBlogComponent implements OnInit {
     console.log(item.id);
     this.blogServise.delete(item.id).subscribe(() => {
       this.loadPost();
-      console.log(this.postForm);
-
     }, err => {
       console.log('delete blog error');
     })

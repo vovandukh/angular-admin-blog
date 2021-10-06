@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IBlog } from '../shared/interfaces/blog.interface';
-import { AdminBlogService } from '../shared/services/admin-blog.service';
+import { ICategory } from '../shared/interfaces/category.inreface';
+import { AdminBlogService } from '../shared/services/admin-blog/admin-blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -23,5 +24,5 @@ export class BlogComponent implements OnInit {
       
     })
   }
-
+ 
 }

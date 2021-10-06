@@ -1,1 +1,76 @@
-<p>categories works!</p>
+<div class="categoryWrapper">
+  <div class="card">
+    <div class="cardhead card-header">
+      <h5>Category</h5>
+      <a class="btn btn-dark" style="width: 100px;" data-bs-toggle="modal" data-bs-target="#categoryModal">Add</a>
+    </div>
+    <div class="card-body">
+      <input type="text" class="form-control" placeholder="filter category.." aria-label="Recipient's username"
+        aria-describedby="basic-addon2">
+      <hr>
+      <table class="table" style="height: 60%;">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" style="width: 70%;">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of category,let i = index;">
+            <th>{{ i+1 }}</th>
+            <td>{{ item.name }}</td>
+            <td>
+              <button class="btn btn-dark" type="button" (click)="editCategory(item)" data-bs-toggle="modal"
+                data-bs-target="#categoryModal">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-dark" type="button" (click)="openModal(item.id)"
+              data-bs-toggle="modal"
+                data-bs-target="#deleteModal">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="categoryForm">
+          <div class="mb-3">
+            <input formControlName="name" type="text" class="form-control" id="recipient-name"
+              placeholder="name here..">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-dark" data-bs-dismiss="modal" [disabled]="categoryForm.invalid"
+          (click)="createCategory()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteModal" aria-hidden="true" aria-labelledby="deleteModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body d-flex justify-content-md-between">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+          style="width: 40%; height: 60px;">Dismiss</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+          style="width: 40%; height: 60px;" (click)="deleteCategory()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
