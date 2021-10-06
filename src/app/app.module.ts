@@ -8,13 +8,15 @@ import { BlogComponent } from './blog/blog.component';
 import { AdminComponent } from './admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesComponent } from './admin/admin-categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminBlogComponent,
     BlogComponent,
-    AdminComponent
+    AdminComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

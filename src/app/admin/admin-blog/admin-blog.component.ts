@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IBlog } from 'src/app/shared/interfaces/blog.interface';
-import { AdminBlogService } from 'src/app/shared/services/admin-blog.service';
+import { AdminBlogService } from 'src/app/shared/services/admin-blog/admin-blog.service';
 
 @Component({
   selector: 'app-admin-blog',
