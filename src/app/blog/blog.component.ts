@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IBlog } from '../shared/interfaces/blog.interface';
-import { ICategory } from '../shared/interfaces/category.inreface';
+import { IBlog } from '../shared/interfaces/blog/blog.interface';
+import { ICategory } from '../shared/interfaces/category/category.interface';
 import { AdminBlogService } from '../shared/services/admin-blog/admin-blog.service';
 
 @Component({

@@ -17,6 +17,28 @@
     {
       "id": 712,
       "name": "pizza"
+    },
+    {
+      "id": 614,
+      "name": "drinks"
+    }
+  ],
+  "products": [
+    {
+      "id": 434,
+      "category": "pizza",
+      "name": "Tsezario",
+      "description": "bla bla",
+      "price": "222грн",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/angular-task-6a5d8.appspot.com/o/products%2Ftsezario.jpg.jpg?alt=media&token=c6062622-8410-4c8a-96b4-65beda177e9a"
+    },
+    {
+      "id": 751,
+      "category": "drinks",
+      "name": "juice",
+      "description": "bla bla 11",
+      "price": "42",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/angular-task-6a5d8.appspot.com/o/products%2Frich_orange_small-1.jpg.jpg?alt=media&token=d6bfb98f-4bbe-4e8c-b758-2c3d4656bd5c"
     }
   ]
 }

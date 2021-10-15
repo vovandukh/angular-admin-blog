@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validator, FormGroup, Validators } from '@angular/forms';
-import { ICategory } from 'src/app/shared/interfaces/category.inreface';
+import { ICategory } from 'src/app/shared/interfaces/category/category.interface';
 import { AdminBlogService } from 'src/app/shared/services/admin-blog/admin-blog.service';
 import { AdminCategoriesService } from 'src/app/shared/services/admin-categories/admin-categories.service';
 
@@ -16,6 +16,7 @@ export class CategoriesComponent implements OnInit {
   public curentIDCategory!: number;
   public editStatus = false;
   public idCategory!:number;
+  public filterCategory = '';
 
   constructor(
     private adminCategory: AdminCategoriesService,

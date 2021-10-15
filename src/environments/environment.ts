@@ -4,7 +4,17 @@
 
 export const environment = {
   production: false,
-  BACKEND_URL: 'http://localhost:3000'
+  BACKEND_URL: 'http://localhost:3000',
+  firebaseConfig: {
+    apiKey: "AIzaSyDFTmkxHzZZu7eT8HdAwc4hA45peqnJUnE",
+    authDomain: "angular-task-6a5d8.firebaseapp.com",
+    databaseURL: "https://angular-task-6a5d8-default-rtdb.firebaseio.com",
+    projectId: "angular-task-6a5d8",
+    storageBucket: "angular-task-6a5d8.appspot.com",
+    messagingSenderId: "94203169337",
+    appId: "1:94203169337:web:85a50338bd08eadc985be8",
+    measurementId: "G-CBYB6QB45Y"
+  }
 };
 
 /*

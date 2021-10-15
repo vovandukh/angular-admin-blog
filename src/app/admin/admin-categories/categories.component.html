@@ -6,7 +6,7 @@
     </div>
     <div class="card-body">
       <input type="text" class="form-control" placeholder="filter category.." aria-label="Recipient's username"
-        aria-describedby="basic-addon2">
+        aria-describedby="basic-addon2" [(ngModel)]="filterCategory">
       <hr>
       <table class="table" style="height: 60%;">
         <thead>
@@ -18,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of category,let i = index;">
+          <tr *ngFor="let item of category | filter: filterCategory, let i = index">
             <th>{{ i+1 }}</th>
             <td>{{ item.name }}</td>
             <td>
